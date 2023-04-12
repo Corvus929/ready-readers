@@ -30,7 +30,6 @@ async function login(req, res) {
     const match = await bcrypt.compare(req.body.password, user.password);
     if (!match) throw new Error();
     const token = createJWT(user)
-    console.log(token)
     res.json(token);
   } catch {
     res.status(400).json('Bad Credentials');
