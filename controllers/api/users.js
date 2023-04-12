@@ -29,7 +29,9 @@ async function login(req, res) {
     // Check if the password matches
     const match = await bcrypt.compare(req.body.password, user.password);
     if (!match) throw new Error();
-    res.json( createJWT(user) );
+    const token = createJWT(user)
+    console.log(token)
+    res.json(token);
   } catch {
     res.status(400).json('Bad Credentials');
   }
@@ -39,6 +41,7 @@ async function login(req, res) {
 /* Helper Functions */
 
 function createJWT(user) {
+  console.log(user)
   return jwt.sign(
     // data payload
     { user },
