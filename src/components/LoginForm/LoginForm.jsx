@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm({ setUser }) {
-  const navigate = Navigate;
+  const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''

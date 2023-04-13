@@ -1,9 +1,7 @@
-export default function ReadingsPage({ user }){
+export default function ReadingsPage({ readings }){    
     return(
         <div>
-            <h2>Your readings:</h2>
-            
-            
+            <h3>Your readings: </h3>
         </div>
     )
 }

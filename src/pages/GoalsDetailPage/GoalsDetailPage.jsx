@@ -1,9 +1,5 @@
-export default function GoalsDetails({ user }){
+export default function GoalDetail(){
     return(
-        <div>
-            <h2>Goals details</h2>
-            
-            
-        </div>
+        <h1>Your goal: </h1>
     )
 }
