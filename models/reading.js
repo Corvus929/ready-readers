@@ -12,3 +12,5 @@ const readingSchema = new Schema({
 }, {
     timestamps: true
     })
+
+module.exports = mongoose.model('Reading', readingSchema);

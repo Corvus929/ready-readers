@@ -11,4 +11,4 @@ const goalSchema = new Schema ({
     }]
 })
 
-module.exports = mongoose.model('Reading', readingSchema)
+module.exports = mongoose.model('Goal', goalSchema)

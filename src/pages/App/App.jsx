@@ -18,14 +18,15 @@ export default function App() {
       { user ?
         <>
           <NavBar user={user} setUser={setUser} />
+          <hr />
           <Routes>
             {/* client-side route that renders the component instance if the path matches the url in the address bar */}
             <Route path="/goals" element={<GoalsPage />}/>
             <Route path="/goals/:id" element={<GoalsDetails />}/>
-            <Route path="/goals/new" element={<NewGoal />}/>
+            <Route path="/goals/new" element={<NewGoal user={user} setUser={setUser}/>}/>
             <Route path="/readings" element={<ReadingsPage />}/>
             <Route path="/readings/:id" element={<ReadingsDetails />}/>
-            <Route path="/readings/new" element={<NewReading />}/>
+            <Route path="/readings/new" element={<NewReading user={user} setUser={setUser}/>}/>
           </Routes>
         </>
         :

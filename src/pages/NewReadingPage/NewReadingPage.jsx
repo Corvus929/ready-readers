@@ -1,10 +1,11 @@
 import NewReadingForm from '../../components/NewReadingForm/NewReadingForm'
 
-export default function NewReading(){
+export default function NewReading({ user, setUser }){
     return (
         <div>
-            <h3>New reading form below</h3>
-            <NewReadingForm />
+            <h1>New reading!</h1>
+            <br />
+            <NewReadingForm user={user} setUser={setUser} />
         </div>
     )
 }
