@@ -1,14 +1,15 @@
 import { useState } from 'react';
+import * as readingsService from '../../utilities/readings-service'
 
 export default function ReadingForm(){
-    const [reading, setReading] = useState('');
+    const [reading, setReading] = useState(0);
     function handleChange(evt){
         setReading(evt.target.value)
     }
 
-    function handleSubmit(evt){
+    async function handleSubmit(evt){
         evt.preventDefault();
-        alert(reading)
+        readingsService.createReading(reading)
         setReading(0);
     }   
     return (
