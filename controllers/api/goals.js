@@ -1,4 +1,4 @@
-const Reading = require('../../models/reading')
+const Goal = require('../../models/goal')
 
 module.exports = {
   create,
@@ -8,10 +8,9 @@ module.exports = {
 async function create(req, res) {
     try {
       req.body.user = req.user._id
-      console.log(req.body)
-      const createdReading = new Reading(req.body)
-    createdReading.save()
-    console.log(createdReading)
+      const createdGoal = new Goal(req.body)
+    createdGoal.save()
+    console.log(createdGoal)
     res.json(req.body)
   } catch (err) {
     console.log(err)
@@ -21,8 +20,8 @@ async function create(req, res) {
 
 async function index(req, res){
   try {
-    const allReadings = await Reading.find({});
-    res.json(allReadings)
+    const allGoals = await Goal.find({});
+    res.json(allGoals)
   } catch (err) {
     console.log(err)
     res.status(400).json(err)

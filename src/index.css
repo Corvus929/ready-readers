@@ -21,8 +21,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #3f709e;
+  text-align: center;
   padding: 2vmin;
   height: 100vh;
+  border-radius: 2vmin;
 }
 
 code {
@@ -33,6 +35,8 @@ code {
 nav {
   display: flex;
   justify-content: space-around;
+  height: 20%;
+  font-size: 4vh;
 }
 
 #root {
@@ -87,6 +91,7 @@ nav {
   background-color: #ab2b2f;
   border: 1vmin solid lightgrey;
   border-radius: 1vmin;
+  text-align: center;
 }
 
 p.error-message {
@@ -99,6 +104,9 @@ form {
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
   color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 label {

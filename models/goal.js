@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const goalSchema = new Schema ({
     goalName: String,
     pageGoal: Number,
-    // timeGoal: , type for adding minutes and hours?
+    timeGoal: Number,
     readings: [{
         type: Schema.Types.ObjectId,
         ref: 'Reading'

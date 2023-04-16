@@ -9,17 +9,17 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <span>Little Logo here please cor dont forget me</span>
-      <span>Ready readers? Get ready, set, read!</span>
-      &nbsp; | &nbsp;
+      <span><img src="https://pngtree.com/freepng/dog-and-cat-silhouette-vector-design-template_4960664.html" alt="cute logo" /></span>
       <Link to="/readings">Readings</Link>
       &nbsp; | &nbsp;
       <Link to="/readings/new">New Reading</Link>
       &nbsp; | &nbsp;
+      <span>Ready readers? Get ready, set, read!</span>
+      &nbsp; | &nbsp;
       <Link to="/goals">Goals</Link>
-      &nbsp; | &nbsp;
+      &nbsp; | &nbsp; &nbsp;
       <Link to="/goals/new">New Goals</Link>
-      &nbsp; | &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );

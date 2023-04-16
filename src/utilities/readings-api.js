@@ -1,7 +1,11 @@
 import sendRequest from "./send-request";
 const BASE_URL = '/api/readings'
 
-export async function createReadingRequest(readingData) {
-    const newReading = { text: readingData}
+export function getReadingsRequest(){
+    return sendRequest(BASE_URL, 'GET')
+}
+
+export async function createReadingRequest(bookName, pages, time) {
+    const newReading = { bookName: bookName, pages: pages, time: time}
     return sendRequest(BASE_URL, 'POST', newReading);
 }
