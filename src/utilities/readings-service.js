@@ -5,8 +5,17 @@ export async function getAllReadings() {
     return allReadings
 }
 
-export async function createReading(bookName, pages, time) {
-    const newReading = await readingsAPI.createReadingRequest(bookName, pages, time)
-    // readingsAPI.createReadingRequest(readingData)
+export async function createReading(reading) {
+    const newReading = await readingsAPI.createReadingRequest(reading)
     return newReading
+}
+
+export async function editReading(reading) {
+    const editReadings = await readingsAPI.editReadingRequest(reading)
+    return editReadings 
+}
+
+export async function deleteReading(reading) {
+    const deleteReading = await readingsAPI.deleteReadingRequest(reading)
+    return deleteReading
 }

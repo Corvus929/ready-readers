@@ -8,12 +8,11 @@ router.post('/', readingsCtrl.create)
 //list page
 router.get('/', readingsCtrl.index)
 
-//detail
-// router.get('/:id', readingsCtrl.show)
-//form 
+// detail
+router.put('/:id', readingsCtrl.edit)
 
-// router.get('/new', readingsCtrl.new)
-//create from form
-// router.post('/new', readingsCtrl.create)
+//delete
+router.delete('/', readingsCtrl.delete)
+
 
 module.exports = router;
