@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import * as readingsService from '../../utilities/readings-service'
-
+import { useNavigate } from 'react-router-dom';
 export default function ReadingForm(){
+    let navigate = useNavigate('')
     const [reading, setReading] = useState({
         bookName: '',
         pages: 0,
@@ -14,13 +15,11 @@ export default function ReadingForm(){
 
     async function handleSubmit(evt){
         evt.preventDefault();
+        console.log('submit p1')
         readingsService.createReading(reading)
-        setReading({
-        bookName: '',
-        pages: 0,
-        time: 0,
-        })
-    }   
+        console.log('this is a reading', reading)
+        navigate('/readings')
+    }     
 
     return (
         <div class='form-container'> 

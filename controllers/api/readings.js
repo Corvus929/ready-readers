@@ -10,8 +10,9 @@ module.exports = {
 
 async function create(req, res) {
     try {
-      req.body.user = req.user
-      const createdReading = new Reading(req.body)
+      console.log(req.body.reading)
+      req.body.reading.user = req.user
+      const createdReading = new Reading(req.body.reading)
     createdReading.save()
     res.json(req.body)
   } catch (err) {
