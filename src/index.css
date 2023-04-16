@@ -98,6 +98,10 @@ nav {
   color: white;
 }
 
+img {
+  width: 10vmin;
+  height: 10vmin;
+}
 
 .form-container {
   padding: 3vmin;

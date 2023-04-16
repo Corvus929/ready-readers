@@ -24,15 +24,13 @@ export default function ReadingsPage(){
             { readings ?
                     readings.map((reading) =>
                         <div class='card'> 
-                        {/* <Link to='readings/' reading._id > */}
-
-                            <h3>{reading.bookName}</h3>  
-                            <h4>You read {reading.pages} pages</h4>
-                            <h4>You read for {reading.time} minutes</h4>
+                        <Link to={`/readings/${reading._id}`} state={reading} >
+                            <h2>{reading.bookName}</h2>  
+                            <h4>You read {reading.pages} pages in {reading.time} minutes </h4>
+                            </Link>
                             <form action="" class='delete-form' onSubmit={handleSubmit}>
-                                <button type='submit'>X</button>
+                                <button type='submit' value='X'>X</button>
                             </form>
-                            {/* </Link> */}
                         </div>
                     )
                 :

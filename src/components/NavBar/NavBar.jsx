@@ -9,7 +9,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <span><img src="https://pngtree.com/freepng/dog-and-cat-silhouette-vector-design-template_4960664.html" alt="cute logo" /></span>
+      <span><img src="https://i.imgur.com/BKapvE1.png" alt="cute logo" /></span>
       <Link to="/readings">Readings</Link>
       &nbsp; | &nbsp;
       <Link to="/readings/new">New Reading</Link>

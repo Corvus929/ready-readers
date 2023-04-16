@@ -37,7 +37,7 @@ export default function App() {
             <Route path="/goals/new" element={<NewGoal />}/>
             <Route path="/readings/new" element={<NewReading />}/>
             <Route path="/readings" element={<ReadingsPage readings={readings} />}/>
-            <Route path="/readings/:readingId" element={<EditReadingPage readings={readings}/>}/>
+            <Route path="/readings/:id" element={<EditReadingPage readings={readings}/>}/>
             {/* <Route path="/readings/:id" element={<ReadingDetail />}/> */}
           </Routes>
         </>

@@ -12,7 +12,7 @@ export async function createReadingRequest(reading) {
 
 export async function editReadingRequest(reading) {
     const editedReading = { reading: reading }
-    return sendRequest(BASE_URL, 'PUT', editedReading)
+    return sendRequest(`${BASE_URL}/${reading._id}`, 'PUT', editedReading)
 }
 
 export async function deleteReadingRequest(reading) {
