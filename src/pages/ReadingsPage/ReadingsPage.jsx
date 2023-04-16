@@ -25,8 +25,10 @@ export default function ReadingsPage(){
                     readings.map((reading) =>
                         <div class='card'> 
                         <Link to={`/readings/${reading._id}`} state={reading} >
-                            <h2>{reading.bookName}</h2>  
-                            <h4>You read {reading.pages} pages in {reading.time} minutes </h4>
+                            <div>
+                                <h2>{reading.bookName}</h2>  
+                                <h4>You read {reading.pages} pages in {reading.time} minutes </h4>
+                            </div>
                             </Link>
                             <form action="" class='delete-form' onSubmit={handleSubmit}>
                                 <button type='submit' value='X'>X</button>
