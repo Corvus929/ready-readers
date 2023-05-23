@@ -5,6 +5,7 @@ export async function getAllGoals() {
     return allGoals
 }
 
-export async function createGoal(goalData) {
-    goalsAPI.createGoalRequest(goalData)
+export async function createGoal(goal) {
+    const newGoal = await goalsAPI.createGoalRequest(goal)
+    return newGoal
 }

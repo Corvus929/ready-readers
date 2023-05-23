@@ -3,14 +3,17 @@ const Goal = require('../../models/goal')
 module.exports = {
   create,
   index,
+
+
+
 };
 
 async function create(req, res) {
     try {
-      req.body.user = req.user._id
-      const createdGoal = new Goal(req.body)
+      console.log(req.body.goal)
+      req.body.goal.user = req.user
+      const createdGoal = new Goal(req.body.goal)
     createdGoal.save()
-    console.log(createdGoal)
     res.json(req.body)
   } catch (err) {
     console.log(err)

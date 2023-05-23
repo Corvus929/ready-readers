@@ -5,7 +5,7 @@ export function getGoalsRequest(){
     return sendRequest(BASE_URL, 'GET')
 }
 
-export async function createGoalRequest(GoalData) {
-    const newGoal = { text: GoalData}
+export async function createGoalRequest(goal) {
+    const newGoal = { goal: goal}
     return sendRequest(BASE_URL, 'POST', newGoal);
 }

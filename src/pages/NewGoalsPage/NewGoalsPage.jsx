@@ -1,10 +1,10 @@
 import GoalForm from "../../components/NewGoalForm/NewGoalForm"
 
-export default function NewGoal(){
+export default function NewGoal({ user, setUser }){
     return(
         <div>
             <h3>NewGoalForm</h3>
-            <GoalForm />
+            <GoalForm user={user} setUser={setUser}/>
         </div>
     )
 }

@@ -14,7 +14,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/readings/new">New Reading</Link>
       &nbsp; | &nbsp;
-      <span>Ready readers? Get ready, set, read!</span>
+      <span>Ready reader {user.name} ? Get ready, set, read!</span>
       &nbsp; | &nbsp;
       <Link to="/goals">Goals</Link>
       &nbsp; | &nbsp; &nbsp;
